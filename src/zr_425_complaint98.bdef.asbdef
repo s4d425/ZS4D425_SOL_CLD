@@ -1,0 +1,51 @@
+managed implementation in class ZBP_425_COMPLAINT98 unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_425_COMPLAINT98 alias Complaint
+persistent table z425_complaint98
+draft table Z425_COMPLAIN98D
+etag master LocalLastChanged
+lock master total etag LastChanged
+authorization master( global )
+
+{
+  field ( readonly )
+   ComplaintID,
+   UUID,
+   LastChanged,
+   LocalLastChanged;
+
+  field ( numbering : managed )
+   UUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for Z425_COMPLAINT98
+  {
+    UUID = uuid;
+    ComplaintID = complaint_id;
+    InvoiceID = invoice_id;
+    CustomerID = customer_id;
+    CustomerName = customer_name;
+    Reason = reason;
+    Action = action;
+    Closed = closed;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChanged = local_last_changed;
+    LastChanged = last_changed;
+  }
+  determination CalculateComplaintID on save { create; }
+}

@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service def for ZC_425_COMPLAINT98'
+define service ZUI_425_COMPLAINT98_O4 {
+  expose ZC_425_COMPLAINT98   as Complaint;
+  expose ZCE_D425_INVOICES_98 as Invoice;
+}

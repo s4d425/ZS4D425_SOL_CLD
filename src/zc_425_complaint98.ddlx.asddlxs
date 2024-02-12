@@ -1,0 +1,139 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Complaint',
+    typeNamePlural: 'Complaints',
+   title: {
+     type: #STANDARD,
+     label: 'Complaint',
+     value: 'ComplaintID'
+  }
+  }
+}
+annotate view ZC_425_COMPLAINT98 with
+{
+  @UI.facet: [ {
+    id: 'idIdentification',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'Complaint',
+    position: 10
+  } ]
+  @UI.hidden: true
+  UUID;
+
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #MEDIUM,
+    label: 'Complaint ID'
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Complaint ID'
+  } ]
+  ComplaintID;
+
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #MEDIUM,
+    label: 'Invoice ID'
+  } ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Invoice ID'
+  } ]
+  InvoiceID;
+
+  @UI.lineItem: [ {
+    position: 30 ,
+    importance: #MEDIUM,
+    label: 'Customer ID'
+  } ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Customer ID'
+  } ]
+  CustomerID;
+
+  @UI.lineItem: [ {
+    position: 40 ,
+    importance: #MEDIUM,
+    label: 'Customer Name'
+  } ]
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Customer Name'
+  } ]
+  CustomerName;
+
+  @UI.lineItem: [ {
+    position: 50 ,
+    importance: #MEDIUM,
+    label: 'Reason'
+  } ]
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Reason'
+  } ]
+  Reason;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    importance: #MEDIUM,
+    label: 'Action'
+  } ]
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Action'
+  } ]
+  Action;
+
+  @UI.lineItem: [ {
+    position: 70 ,
+    importance: #MEDIUM,
+    label: 'Closed'
+  } ]
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Closed'
+  } ]
+  Closed;
+
+  @UI.lineItem: [ {
+    position: 80 ,
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 80
+  } ]
+  CreatedBy;
+
+  @UI.lineItem: [ {
+    position: 90 ,
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 90
+  } ]
+  CreatedAt;
+
+  @UI.lineItem: [ {
+    position: 100 ,
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 100
+  } ]
+  LastChangedBy;
+
+  @UI.lineItem: [ {
+    position: 110 ,
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 110
+  } ]
+  LastChangedAt;
+
+  @UI.hidden: true
+  LocalLastChanged;
+}
