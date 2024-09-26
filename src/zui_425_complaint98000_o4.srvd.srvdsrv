@@ -1,0 +1,7 @@
+@EndUserText: {label: 'Service Definition for ZC_425_COMPLAINT98'}
+@ObjectModel: {leadingEntity: {name: 'ZC_425_COMPLAINT98'}}
+define service ZUI_425_COMPLAINT98000_O4
+  provider contracts odata_v4_ui {
+  expose ZC_425_COMPLAINT98   as Complaint;
+  expose ZCE_D425_INVOICES_98  as Invoice;
+}
